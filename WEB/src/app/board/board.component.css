@@ -1,0 +1,56 @@
+.keyboard-container {    
+    width: 30%;
+    clear: both;    
+    float: left;
+}
+
+.keyboard-button-container {
+    padding: 0 !important;   
+}
+
+.keyboard-button {
+    background-color: #343a40;    
+    height: 50px; 
+    line-height: 50px;
+    color: #ffffff !important;
+    font-weight: bold;
+    border: solid 1px #ffffff;
+    width: 100%;
+}
+
+.clear-button {
+    font-size: 12px;
+    line-height: 14px;    
+}
+
+.keyboard-button-text {
+    color: #545454 !important;
+}
+
+.station-container {
+    width: 30%;
+    float: left;
+    margin-left: 70px;
+}
+
+.clear-container {
+    width: 7%;
+    float: left;
+    margin-left: 15px;    
+}
+
+.user-input-container {
+    width: 120px;
+    float: left;    
+}
+
+.user-input {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    font-size: 27px;
+    margin-left: 5px;
+    height: 30px;
+    line-height: 30px;    
+}

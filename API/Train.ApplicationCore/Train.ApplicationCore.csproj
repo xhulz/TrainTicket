@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+    <Compile Remove="Interface\IRepositoryBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entity\" />
+    <Folder Include="Interface\" />
+    <Folder Include="Service\" />
+    <Folder Include="Interface\Repository\" />
+    <Folder Include="Interface\Service\" />
+    <Folder Include="Interface\Data\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,58 @@
+<div *ngIf="stations.length === 0" class="text-center">
+  loading...
+</div>
+<div *ngIf="stations.length > 0" style="margin-left: 5%">
+  <div>
+    <div>
+      <h4 class="user-input-container">User Input:</h4>
+      <span class="user-input">{{ userInput }}</span>
+    </div>   
+  </div>
+  <div>
+    <div class="keyboard-container">
+      <div *ngFor="let item of keyboard; let i = index">
+        <div *ngIf="i % 5 == 0" class="row">
+          <div class="col keyboard-button-container">
+            <button (click)="setKey(item.key)" [disabled]="!item.enabled" class="text-center keyboard-button" [ngClass]="{'keyboard-button-text': !item.enabled}">{{ item.key }}</button>
+          </div>
+          <div class="col keyboard-button-container" *ngIf="i + 1 < keyboard.length">
+            <button (click)="setKey(keyboard[i + 1].key)" [disabled]="!keyboard[i + 1].enabled" class="text-center keyboard-button" [ngClass]="{'keyboard-button-text': !keyboard[i + 1].enabled}">{{ keyboard[i + 1].key }}</button>
+          </div>
+          <div class="col keyboard-button-container" *ngIf="i + 2 < keyboard.length">
+            <button (click)="setKey(keyboard[i + 2].key)" [disabled]="!keyboard[i + 2].enabled" class="text-center keyboard-button" [ngClass]="{'keyboard-button-text': !keyboard[i + 2].enabled}">{{ keyboard[i + 2].key }}</button>
+          </div>
+          <div class="col keyboard-button-container" *ngIf="i + 3 < keyboard.length">
+            <button (click)="setKey(keyboard[i + 3].key)" [disabled]="!keyboard[i + 3].enabled" class="text-center keyboard-button" [ngClass]="{'keyboard-button-text': !keyboard[i + 3].enabled}">{{ keyboard[i + 3].key }}</button>
+          </div>
+          <div class="col keyboard-button-container" *ngIf="i + 4 < keyboard.length">
+            <button (click)="setKey(keyboard[i + 4].key)" [disabled]="!keyboard[i + 4].enabled" class="text-center keyboard-button" [ngClass]="{'keyboard-button-text': !keyboard[i + 4].enabled}">{{ keyboard[i + 4].key }}</button>
+          </div>
+        </div>
+      </div>    
+    </div>
+    <div class="clear-container">
+      <button (click)="clear()" class="text-center keyboard-button">CLEAR</button>
+      <button (click)="setKey(' ')" class="text-center keyboard-button clear-button">WHITE SPACE</button>
+    </div>  
+    <div class="station-container">
+      <table class="table table-dark" *ngIf="filteredStations.length > 0">
+        <thead>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of filteredStations; let i = index">
+            <th scope="row">{{ item.name }}</th>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table table-dark" *ngIf="filteredStations.length === 0 && this.userInput.length > 0">
+        <thead>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">NO STATIONS</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

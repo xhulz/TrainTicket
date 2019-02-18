@@ -28,3 +28,7 @@ Aplicação usando ASP.NET Core com DDD Clean e Interface em Angular 6.
   - Executar o comando ```ng serve``` para rodar o projeto em modo **DEVELOPER**
   - Executar o comando ```ng build --configuration=production --source-map``` para compilar o projeto em modo **PRODUÇÃO**
   - Fazer o deploy do conteúdo do diretório **DIST** para o servidor web
+
+# Visualizar o projeto em modo produção
+
+ 1. Para visualizar o projeto em modo **Produção**, acessar a URL: https://train-ticket.azurewebsites.net/
